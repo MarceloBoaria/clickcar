@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+
+.divCadastro {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/images/tela-fundo-cadastro.jpg");
+    background-size: cover;
+}
+
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    left: 200px;
+    top: 170px;
+    padding: 10px 40px 10px 40px;
+    border-radius: 10px;
+    color: white;
+}
+
+.btnCadastro {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 275px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.inputCadastro {
+    padding: 10px;
+    width: 250px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.inputCadastro::placeholder {
+    font-weight: bold;
+    opacity: 0.5;
+    color: white;
+}
+
+h2 {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+label {
+    text-align: center;
+}
