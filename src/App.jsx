@@ -1,5 +1,8 @@
 import "./App.css";
 import Estoque from "./components/Estoque";
+import Localizacao from './components/Localizacao';
+import Sobre from './components/Sobre';
+import Contato from './components/Contato';
 
 function App() {
   
@@ -30,12 +33,17 @@ function App() {
           <p className="tituloEstoque">ALGUNS DOS VEÍCULOS EM NOSSO ESTOQUE</p>
           <p className="pEstoque">Todos os nossos veículos são inspecionados e periciados, garantindo o máximo em qualidade e excelência.</p>
           <button className="btnEstoque">CONFIRA NOSSO ESTOQUE COMPLETO</button>
-          <Estoque/>
+          <Estoque />
           <div className="estoqueCompleto">
             <h2>CONFIRA NOSSO ESTOQUE COMPLETO</h2>
           </div>
         </div>
       </section>
+      <footer>
+        <Localizacao />
+        <Sobre />
+        <Contato />
+      </footer>
     </>
   );
 }

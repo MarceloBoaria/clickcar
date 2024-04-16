@@ -1,4 +1,4 @@
-.localizacao {
+.contato {
     border: 3px solid black;
     background-color: rgba(246, 242, 242, 0.923);
     width: 98vw;
@@ -9,6 +9,6 @@
     justify-content: center;
 }
 
-.h2localizacao {
+.h2contato {
     font-size: 100px;
 }
