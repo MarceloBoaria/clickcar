@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+
+.container {
+  width: 100vw;
+  height: 95vh;
+  background-image: url("/images/tela-fundo-login.jpg");
+  background-size: cover;
+}
+
+.tabBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 20px;
+  color: #ffc107;
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 600px;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+}
+
+.pNav {
+  cursor: pointer;
+}
+
+.login-cadastro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+.btnHeader {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #ffc107;
+  color: black;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+}
+
