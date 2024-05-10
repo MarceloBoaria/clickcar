@@ -8,7 +8,7 @@ import RegisterCar from "./components/RegisterCar";
 
 function App() {
 
-  const [conteudo, setConteudo] = useState(<RegisterCar />)
+  const [conteudo, setConteudo] = useState(<Register />)
   
   return (
     <>

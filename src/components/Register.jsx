@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Register.css";
+import axios from "axios";
 
 const Register = () => {
 
@@ -10,7 +11,7 @@ const Register = () => {
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
 
-    const registerUser = () => {
+    const registerUser = async () => {
         const newUser = {
             name: name,
             email: email,
@@ -18,6 +19,8 @@ const Register = () => {
             phone: phone,
             password: password,
         };
+
+        await axios.post("http://localhost:8080/users", newUser)
 
         let usersList = users
         usersList.push(newUser);
