@@ -1,7 +1,0 @@
-.flexLinha {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    margin: 20px;
-    justify-content: center;
-}
