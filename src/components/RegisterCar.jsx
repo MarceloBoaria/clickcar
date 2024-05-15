@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./RegisterCar.css";
+import axios from "axios";
 
 const RegisterCarCar = () => {
 
     const [cars, setCars] = useState([]);
-    const [details, setDetails] = useState([]);
     const [brand, setBrand] = useState('');
     const [model, setModel] = useState('');
     const [yearManufacture, setYearManufacture] = useState('');
@@ -22,14 +22,7 @@ const RegisterCarCar = () => {
     const [airConditioning, setAirConditioning] = useState('');
 
     const registerCar = () => {
-        const newCar = {
-            brand: brand,
-            model: model,
-            yearManufacture: yearManufacture,
-            mileage: mileage
-        };
-
-        const newDetails = {
+        const details = {
             absBrake: absBrake,
             electricGlass: electricGlass,
             color: color,
@@ -43,16 +36,23 @@ const RegisterCarCar = () => {
             airConditioning: airConditioning
         };
 
+        const newCar = {
+            model: model,
+            brand: brand,
+            yearManufacture: yearManufacture,
+            mileage: mileage,
+            details: details
+        };
+    
+        
         let carsList = cars
         carsList.push(newCar);
-
-        let detailsList = details
-        detailsList.push(newDetails);
-
-        setDetails(detailsList);
+        
+        console.log(newCar);
+        
         setCars(carsList);
-        setBrand("");
         setModel("");
+        setBrand("");
         setYearManufacture("");
         setMileage("");
         setAbsBrake("");
@@ -71,8 +71,8 @@ const RegisterCarCar = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (
-            brand !== "" &&
             model !== "" &&
+            brand !== "" &&
             yearManufacture !== "" &&
             mileage !== "" &&
             absBrake !== "" &&
@@ -103,16 +103,16 @@ const RegisterCarCar = () => {
                     <input
                         type="text"
                         className="inputRegisterCar"
-                        placeholder="Marca:"
-                        value={brand}
-                        onChange={(e) => setBrand(e.target.value)}
+                        placeholder="Modelo:"
+                        value={model}
+                        onChange={(e) => setModel(e.target.value)}
                     />
                     <input
                         type="text"
                         className="inputRegisterCar"
-                        placeholder="Modelo:"
-                        value={model}
-                        onChange={(e) => setModel(e.target.value)}
+                        placeholder="Marca:"
+                        value={brand}
+                        onChange={(e) => setBrand(e.target.value)}
                     />
                     <input
                         type="text"
@@ -134,77 +134,77 @@ const RegisterCarCar = () => {
                     <input
                         type="text"
                         className="inputDetailsCar"
-                        placeholder="Freio ABS:"
+                        placeholder="Freio ABS: SIM / NÃO"
                         value={absBrake}
                         onChange={(e) => setAbsBrake(e.target.value)}
                     />
                     <input
                         type="text"
                         className="inputDetailsCar"
-                        placeholder="Vidro Elétrico:"
+                        placeholder="Vidro Elétrico: SIM / NÃO"
                         value={electricGlass}
                         onChange={(e) => setElectricGlass(e.target.value)}
                     />
                     <input
                         type="text"
                         className="inputDetailsCar"
-                        placeholder="Cor:"
+                        placeholder="Cor: Ex: VERMELHO"
                         value={color}
                         onChange={(e) => setColor(e.target.value)}
                     />
                     <input
                         type="text"
                         className="inputDetailsCar"
-                        placeholder="Teto Solar:"
+                        placeholder="Teto Solar: SIM / NÃO"
                         value={sunroof}
                         onChange={(e) => setSunroof(e.target.value)}
                     />
                     <input
                         type="text"
                         className="inputDetailsCar"
-                        placeholder="Portas:"
+                        placeholder="Portas: 2 ou 4"
                         value={doors}
                         onChange={(e) => setDoors(e.target.value)}
                     />
                     <input
                         type="text"
                         className="inputDetailsCar"
-                        placeholder="Trava Elétrica:"
+                        placeholder="Trava Elétrica: SIM / NÃO"
                         value={eletricLock}
                         onChange={(e) => setEletricLock(e.target.value)}
                     />
                     <input
                         type="text"
                         className="inputDetailsCar"
-                        placeholder="Alarme:"
+                        placeholder="Alarme: SIM / NÃO"
                         value={alarm}
                         onChange={(e) => setAlarm(e.target.value)}
                     />
                     <input
                         type="text"
                         className="inputDetailsCar"
-                        placeholder="AirBag:"
+                        placeholder="AirBag: SIM / NÃO"
                         value={airBag}
                         onChange={(e) => setAirBag(e.target.value)}
                     />
                     <input
                         type="text"
                         className="inputDetailsCar"
-                        placeholder="Direção:"
+                        placeholder="Direção: HIDRÁULICA / ELÉTRICA"
                         value={direction}
                         onChange={(e) => setDirection(e.target.value)}
                     />
                     <input
                         type="text"
                         className="inputDetailsCar"
-                        placeholder="Transmissão:"
+                        placeholder="Transmissão: AUTOMÁTICA / MANUAL"
                         value={transmission}
                         onChange={(e) => setTransmission(e.target.value)}
                     />
                     <input
                         type="text"
                         className="inputDetailsCar"
-                        placeholder="Ar Condicionado:"
+                        placeholder="Ar Condicionado: SIM / NÃO"
                         value={airConditioning}
                         onChange={(e) => setAirConditioning(e.target.value)}
                     />

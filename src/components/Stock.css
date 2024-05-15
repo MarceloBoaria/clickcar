@@ -9,7 +9,14 @@
 .stock {
     display: flex;
     flex-direction: column;
+    background-color: gray;
+}
+
+.paragrafos {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    color: white;
 }
 
 .tituloStock {

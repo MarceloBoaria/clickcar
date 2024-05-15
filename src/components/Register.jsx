@@ -20,7 +20,8 @@ const Register = () => {
             password: password,
         };
 
-        await axios.post("http://localhost:8080/users", newUser)
+        await axios.post("http://localhost:8080/users", newUser);
+        console.log(newUser);
 
         let usersList = users
         usersList.push(newUser);

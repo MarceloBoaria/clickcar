@@ -108,7 +108,7 @@ const Perfil = () => {
                     value={complement}
                     onChange={(e) => setComplement(e.target.value)}
                 />
-                <button className="btnEditAddress">Editar Endereço</button>
+                <button className="btnEditAddress">Salvar Endereço</button>
             </div>
         </div>
     );
