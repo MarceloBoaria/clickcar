@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./Perfil.css";
+import "./Profile.css";
 
-const Perfil = () => {
+const Profile = () => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -17,45 +17,45 @@ const Perfil = () => {
     const [complement, setComplement] = useState('');
 
     return (
-        <div className="divPerfil">
+        <div className="divProfile">
             <div className="informations">
                 <h2>Informações</h2>
                 <input
                     type="text"
-                    className="inputPerfil"
+                    className="inputProfile"
                     placeholder="Nome Completo:"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                 />
                 <input
                     type="text"
-                    className="inputPerfil"
+                    className="inputProfile"
                     placeholder="E-mail:"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
                     type="text"
-                    className="inputPerfil"
+                    className="inputProfile"
                     placeholder="CPF:"
                     value={cpf}
                     onChange={(e) => setCpf(e.target.value)}
                 />
                 <input
                     type="text"
-                    className="inputPerfil"
+                    className="inputProfile"
                     placeholder="Telefone:"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                 />
                 <input
                     type="password"
-                    className="inputPerfil"
+                    className="inputProfile"
                     placeholder="Senha:"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <button className="btnEditPerfil">Editar Informações</button>
+                <button className="btnEditProfile">Editar Informações</button>
             </div>
             <div className="address">
                 <h2>Endereço</h2>
@@ -114,4 +114,4 @@ const Perfil = () => {
     );
 };
 
-export default Perfil;
+export default Profile;

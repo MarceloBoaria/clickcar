@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 
-.divPerfil {
+.divProfile {
     width: 100vw;
     height: 100vh;
     background-image: url("/images/tela-fundo-cadastro.jpg");
@@ -46,7 +46,7 @@ label {
     text-align: center;
 }
 
-.inputPerfil {
+.inputProfile {
     padding: 10px;
     width: 250px;
     background: transparent;
@@ -55,7 +55,7 @@ label {
     border-radius: 5px;
 }
 
-.inputPerfil::placeholder {
+.inputProfile::placeholder {
     font-weight: bold;
     opacity: 0.5;
     color: white;
@@ -76,7 +76,7 @@ label {
     color: white;
 }
 
-.btnEditPerfil {
+.btnEditProfile {
     padding: 10px;
     border: 2px solid black;
     border-radius: 15px;

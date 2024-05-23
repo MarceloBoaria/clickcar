@@ -1,6 +1,5 @@
 import "./Stock.css";
-import Carro from "./Carro";
-import NavBar from './NavBar';
+import Carro from "../../components/Cars/Carro";
 
 const Stock = () => {
     const carros = [

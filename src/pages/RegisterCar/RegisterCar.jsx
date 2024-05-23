@@ -21,7 +21,7 @@ const RegisterCarCar = () => {
     const [transmission, setTransmission] = useState('');
     const [airConditioning, setAirConditioning] = useState('');
 
-    const registerCar = () => {
+    const registerCar = async () => {
         const details = {
             absBrake: absBrake,
             electricGlass: electricGlass,
@@ -43,6 +43,9 @@ const RegisterCarCar = () => {
             mileage: mileage,
             details: details
         };
+
+        await axios.post("http://localhost:8080/cars", newCar);
+        console.log(newCar);
     
         
         let carsList = cars

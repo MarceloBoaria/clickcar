@@ -1,12 +1,10 @@
 import "./Home.css";
-import ImageCar from "./ImageCar";
-import NavBar from './NavBar';
-import Stock from "./Stock";
+import Stock from "../Stock/Stock";
+import ImageCar from './../../components/ImageCar/ImageCar';
 
 function Home() {
   return (
     <div>
-        <NavBar />
         <ImageCar />
         <Stock />
     </div>
