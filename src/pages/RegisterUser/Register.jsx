@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Register.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Register = () => {
 
@@ -91,7 +92,7 @@ const Register = () => {
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <button type="submit" className="btnRegister">Cadastrar</button>
-                <label>Já possui uma conta? Login</label>
+                <label>Já possui uma conta? <Link to="/login">Login</Link> </label>
             </form>
         </div>
     );

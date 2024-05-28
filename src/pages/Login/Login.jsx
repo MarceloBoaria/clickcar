@@ -1,4 +1,6 @@
 import "./Login.css";
+import { Link } from "react-router-dom";
+
 
 const Login = () => {
 
@@ -9,7 +11,7 @@ const Login = () => {
                 <input type="text" className="inputLogin" placeholder="E-mail:"/>
                 <input type="text" className="inputLogin" placeholder="Senha:"/>
                 <button className="btnLogin">Logar</button>
-                <label>Não possui uma conta? Cadastre-se</label>
+                <label>Não possui uma conta? <Link to="/register">Cadastre-se</Link> </label>
             </div>
         </div>
     )

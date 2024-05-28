@@ -15,6 +15,11 @@ h1 {
   font-style: normal;
   margin-left: 20px;
   color: #ffc107;
+  text-decoration: none;
+}
+
+.h1{
+  text-decoration: none;
 }
 
 .cabecalho {
@@ -31,6 +36,7 @@ h1 {
 
 .pNav {
   cursor: pointer;
+  text-decoration: none;
 }
 
 .login-cadastro {
