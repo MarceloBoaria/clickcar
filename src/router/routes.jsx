@@ -9,7 +9,6 @@ import Sobre from '../pages/Sobre/Sobre';
 
 import { createBrowserRouter } from 'react-router-dom';
 
-
 const router = createBrowserRouter([
     {
         path: "/",

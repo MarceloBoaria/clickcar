@@ -7,6 +7,10 @@
   width: 100%;
 }
 
+/* .content{
+  margin-top: calc(100vh - 95px);
+} */
+
 h1 {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;

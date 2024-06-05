@@ -4,7 +4,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const Register = () => {
-
     const [users, setUsers] = useState([]);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -24,7 +23,7 @@ const Register = () => {
         await axios.post("http://localhost:8080/users", newUser);
         console.log(newUser);
 
-        let usersList = users
+        let usersList = users;
         usersList.push(newUser);
 
         setUsers(usersList);
@@ -46,9 +45,7 @@ const Register = () => {
         ) {
             registerUser();
         } else {
-            alert(
-                "Por favor, preencha todos os campos para cadastrar um novo usuário!"
-            );
+            alert("Por favor, preencha todos os campos para cadastrar um novo usuário!");
         }
     };
 
@@ -92,7 +89,7 @@ const Register = () => {
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <button type="submit" className="btnRegister">Cadastrar</button>
-                <label>Já possui uma conta? <Link to="/login">Login</Link> </label>
+                <label>Já Possui Uma Conta? <Link to="/login">Login</Link></label>
             </form>
         </div>
     );

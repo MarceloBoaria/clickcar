@@ -5,7 +5,8 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  background-color: black;
+  background-color: rgb(221, 218, 218);
+  
 }
 
 h1 {
@@ -16,6 +17,7 @@ h1 {
   margin-left: 20px;
   color: #ffc107;
   text-decoration: none;
+  
 }
 
 .h1{

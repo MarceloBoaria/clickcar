@@ -7,6 +7,19 @@
   width: 100%;
 }
 
+.containerBackground{
+  height: 50vh;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+.containerHome{
+  margin-top: calc(100vh - 95px);
+}
+
 h1 {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
