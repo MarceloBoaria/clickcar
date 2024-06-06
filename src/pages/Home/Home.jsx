@@ -1,5 +1,5 @@
 import "./Home.css";
-import Stock from "../Stock/Stock";
+import StockHome from "../StockHome/StockHome";
 // import ImageCar from './../../components/ImageCar/ImageCar';
 import BackgroundVideo from '../../components/ImageCar/BackgroundVideo';
 
@@ -10,13 +10,13 @@ function Home() {
     //     </BackgroundVideo>
     <BackgroundVideo> 
       <div className="containerBackground">
-        <h1>quinemduotru</h1>
+        <h1>BEM VINDO AO CLICKCAR</h1>
 
       </div>
 
 
       <div className="containerHome">
-          <Stock />
+          <StockHome />
 
       </div>
     </BackgroundVideo>
