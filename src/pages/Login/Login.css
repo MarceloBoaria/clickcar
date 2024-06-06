@@ -65,11 +65,24 @@ label {
   padding: 4em;
   text-align: center;
   font-family: Arial, sans-serif;
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  /* height: 600px; */
+  background: rgba( 255, 255, 255, 0.2 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 10px );
+-webkit-backdrop-filter: blur( 10px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+align-items: center;
 }
 
 .Inp_login{
   margin-bottom: 9px;
   padding: 8px;
+  border: 1px solid rgb(1, 1, 1)!important;
   border-radius: 4px;
 }
 

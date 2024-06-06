@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Stock.css";
+import "./StockHome.css";
 import Carro from "../../components/Cars/Carro";
 
 const Stock = () => {
@@ -10,21 +10,22 @@ const Stock = () => {
         { id: 4, marca: "Porsche", modelo: "911 Turbo S", ano: 2022 },
         { id: 5, marca: "Rolls-Royce", modelo: "Phantom", ano: 2023 },
         { id: 6, marca: "Bentley", modelo: "Continental GT", ano: 2024 }
-        
     ];
 
     return (
-        <div className="stock">
-            <div className="paragrafos">
-                <p className="titulostock"></p>
-                <p className="pstock">Todos os nossos veículos são inspecionados e periciados, garantindo o máximo em qualidade e excelência.</p>
+        <div className="stockHome">
+            <div className="paragrafosHome">
+                <p className="titulostockHome">ALGUNS DOS VEÍCULOS EM NOSSO ESTOQUE</p>
+                <p className="pstockHome">Todos os nossos veículos são inspecionados e periciados, garantindo o máximo em qualidade e excelência.</p>
             </div>
-            <div className="flexLinha">
+            <div className="flexLinhaHome">
                 {carros.map((carro) => (
                     <Carro key={carro.id} marca={carro.marca} modelo={carro.modelo} ano={carro.ano} />
                 ))}
             </div>
-            
+            <div className="stockCompletoHome">
+            <Link to="/Stock" className="confiraStockHome">CONFIRA NOSSO ESTOQUE COMPLETO</Link>
+            </div>
         </div>
     )
 

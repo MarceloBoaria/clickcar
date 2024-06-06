@@ -25,7 +25,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <h2>Login</h2>
-      <p>Bem-vindo de volta! Por favor, insira seus dados.</p>
+      <p>Bem-vindo de volta!</p>
       <form>
         <input 
           id="cpf-input" 
@@ -38,7 +38,7 @@ const Login = () => {
         />
         <input className="Inp_login" type="password" placeholder="Senha" required />
         <button type="submit" className="login-button">Entrar</button>
-        <p className="signup-text">Não tem uma conta? <Link to="/register">Inscreva-se Gratuitamente</Link></p>
+        <p className="signup-text">Não tem uma conta? <Link to="/register">Inscreva-se</Link></p>
       </form>
     </div>
   );
