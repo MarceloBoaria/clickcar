@@ -1,0 +1,20 @@
+.Whats {
+    margin-bottom: 20px;
+    padding: 10px 50px;  /* Aumentei o padding para melhor aparência */
+    border-radius: 4px;
+    cursor: pointer;
+    color: #f6f6f6;
+    text-align: center;
+    background-color: #373733;
+    border: none;
+    text-decoration: none;
+    font-size: 16px;  /* Adicionei tamanho da fonte */
+    transition: background-color 0.3s ease, transform 0.3s ease;  /* Adicionei transição para efeitos suaves */
+}
+
+.Whats:hover {
+    background-color: #c7c41e;  /* Mudança de cor no hover */
+    transform: scale(03);  /* Efeito de crescimento no hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Adicionei sombra no hover */
+}
+
