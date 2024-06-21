@@ -1,9 +1,12 @@
 import { useState } from "react";
 import "./Register.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
+
+    const navigate = useNavigate();
+
     const [users, setUsers] = useState([]);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -44,6 +47,8 @@ const Register = () => {
             password !== ""
         ) {
             registerUser();
+            navigate("/login");
+
         } else {
             alert("Por favor, preencha todos os campos para cadastrar um novo usuário!");
         }
