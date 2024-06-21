@@ -20,6 +20,10 @@ h2 {
     
 }
 
+/* .divCarro :hover{
+    transform: rotateY(180deg);
+} */
+
 .sub_carro{
     height: 100%;
     width: 100%;
@@ -81,8 +85,6 @@ h2 {
     margin-right: -220px;
     margin-top: -89px;
 }
-
-
 
 .Localizacao{ 
    

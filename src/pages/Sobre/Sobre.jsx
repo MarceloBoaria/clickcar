@@ -1,18 +1,41 @@
-import React from 'react';
+import React from "react";
 import "./Sobre.css";
+import Footer from '../../components/Footer/Footer';
 
 const Sobre = () => {
   return (
     <div className="about-container">
-      <h1 className="about-title">Sobre Nós</h1>
-      <div className="about-content">
+      <h1 className="titulo">A mais de 40 anos no mercado </h1>
+      <div className="Texto">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque justo nec velit commodo, in fermentum tortor consequat. Vivamus sodales tincidunt leo, a fermentum dui congue in. Fusce accumsan semper odio, ut convallis arcu blandit non. Vestibulum non sagittis nunc. Suspendisse nec quam vel odio eleifend volutpat. Proin vehicula auctor justo, ac tempus sem vehicula sed. Duis auctor quam nec quam vehicula, sed elementum nunc commodo. Integer fringilla ullamcorper eros, ac ultricies risus lobortis vel. Nullam vehicula arcu vitae semper mattis. Nam quis urna vel justo convallis dictum vel eget ex. Aenean bibendum, odio vel vestibulum ultricies, sapien sem ultricies velit, nec sollicitudin urna felis vel libero.
+          Fundação em Paris Em 1983, Jacques Beaumont fundou a AutoCars em
+          Paris, França, com a visão de criar veículos elegantes e tecnológicos.
+          A empresa rapidamente se destacou pela qualidade e design inovador de
+          seus automóveis.
         </p>
         <p>
-          Proin eu dolor arcu. Curabitur condimentum massa et lorem lacinia, sed sodales purus ultrices. Duis posuere urna nec luctus aliquet. Fusce auctor laoreet felis non mattis. Nulla facilisi. Integer non tortor et odio tincidunt volutpat. Ut nec tellus volutpat, tristique neque nec, faucibus ligula. Nullam lacinia congue lectus sit amet feugiat. Quisque egestas viverra massa, vel dapibus lacus convallis sit amet. In vitae pharetra sapien, sed malesuada justo. In consequat velit in nunc vehicula, sit amet vestibulum dui hendrerit.
+          Expansão para o Brasil Em 2004, a AutoCars abriu sua primeira sede no
+          Brasil, em São Paulo, escolhida por sua infraestrutura e mercado
+          promissor. A receptividade foi imediata, com a marca conquistando
+          rapidamente uma base de clientes leais.
+        </p>
+        <p>
+          Transformação para ClickCar Em 2010, sob a liderança de Alexandre
+          Beaumont, filho de Jacques, a empresa foi renomeada para ClickCar. A
+          mudança refletiu a nova era digital e atraiu um público mais jovem.
+        </p>
+        <p>
+          Crescimento e Inovação Desde então, a ClickCar expandiu sua presença
+          no Brasil e investiu em veículos híbridos e elétricos, mantendo seu
+          compromisso com a qualidade e a sustentabilidade.
+        </p>
+        <p>
+          Legado A ClickCar continua a inovar e crescer, mantendo-se fiel à sua
+          missão de proporcionar uma experiência de condução inigualável, desde
+          suas raízes em Paris até seu sucesso no Brasil.
         </p>
       </div>
+        { <Footer /> }
     </div>
   );
 };

@@ -10,7 +10,9 @@ function Home() {
     //     </BackgroundVideo>
     <BackgroundVideo> 
       <div className="containerBackground">
-        <h1>BEM VINDO AO CLICKCAR</h1>
+        <h1>
+          
+        </h1>
 
       </div>
 

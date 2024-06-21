@@ -6,7 +6,10 @@
     justify-content: center;
 }
 
+
+
 .stockHome {
+   
     margin-top: -500px;
     display: flex;
     flex-direction: column;
@@ -14,21 +17,23 @@
     /* height: 600px; */
 
     /* width: 90%; */
-    margin-left: 5%;
-    margin-right: 5%;
-     background: rgba( 255, 255, 255, 0.2 );
+    
+    
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 10px );
 -webkit-backdrop-filter: blur( 10px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 ); 
+
 }
 
 .paragrafosHome {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    font-size: 20px;
 }
 
 .tituloStockHome {
@@ -59,7 +64,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .confiraStockHome{
@@ -77,3 +82,62 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     text-align: center;
     cursor: pointer;
 }
+
+/* PrimeImports.css */
+.prime-imports {
+    text-align: center;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .prime-imports h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .prime-imports p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   
+  }
+  
+  .service {
+    background-color: #333;
+    color: #000000;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    min-width: 150px;
+    max-width: 250px;
+    position: relative;
+    border-radius: 15px;
+  }
+
+  .service:hover{
+    background-color: #ffc107;
+    transition: calc(0.7s);
+  }
+  
+  
+  .service h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .service p {
+    font-size: 14px;
+  }
+  
+  .arrow {
+    font-size: 40px;
+    margin: 10px;
+    color: #ccc;
+  }
+  
