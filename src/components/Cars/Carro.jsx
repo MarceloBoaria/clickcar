@@ -35,7 +35,9 @@ function Carro(props) {
       <WhatsApp />
       </div>
       <hr className="Line"></hr>
-      <p className="Localizacao">{props.localizacao}</p>
+      <span class="material-symbols-outlined">
+      favorite
+      </span>
     </div>
   );
 }

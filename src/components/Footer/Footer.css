@@ -1,0 +1,77 @@
+/* Footer.css */
+.footer {
+    background-color: #262525;
+    padding: 1px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 20px;
+  }
+  
+  .footer-section h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-section ul li a,
+  .footer-section p a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover,
+  .footer-section p a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-section form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-section input {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #151515;
+    border-radius: 5px;
+  }
+  
+  .footer-section button {
+    padding: 10px;
+    background-color: #f4f2f2;
+    color: #080808;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .footer-section button:hover {
+    background-color: #ffffff;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+    color: #f7f7f7;
+  }
+  
