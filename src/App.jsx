@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   return (
     <UsuariosContextProvider>
-      <NavBar />
+        <NavBar />
         <Outlet />
     </UsuariosContextProvider>
   );

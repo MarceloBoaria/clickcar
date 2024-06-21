@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Profile.css";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
 
@@ -15,6 +16,17 @@ const Profile = () => {
     const [street, setStreet] = useState('');
     const [number, setNumber] = useState('');
     const [complement, setComplement] = useState('');
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+
+        if(!localStorage.getItem("token")) {
+            alert("Você não está logado!")
+            navigate("/login")
+        }
+  
+      }, []);
 
     return (
         <div className="divProfile">

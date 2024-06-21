@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./RegisterCar.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const RegisterCarCar = () => {
 
@@ -20,6 +21,17 @@ const RegisterCarCar = () => {
     const [direction, setDirection] = useState('');
     const [transmission, setTransmission] = useState('');
     const [airConditioning, setAirConditioning] = useState('');
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+
+        if(!localStorage.getItem("isAdmin")) {
+            alert("Você não está logado como Administrador!")
+            navigate("/")
+        }
+  
+      }, []);
 
     const registerCar = async () => {
         const details = {
