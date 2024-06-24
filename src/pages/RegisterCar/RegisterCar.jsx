@@ -34,8 +34,12 @@ const RegisterCarCar = () => {
       }, []);
 
     const registerCar = async () => {
-        const details = {
-            absBrake: absBrake,
+
+        const newCar = {
+            model: model,
+            brand: brand,
+            yearManufacture: yearManufacture,
+            mileage: mileage,absBrake: absBrake,
             electricGlass: electricGlass,
             color: color,
             sunroof: sunroof,
@@ -46,14 +50,6 @@ const RegisterCarCar = () => {
             direction: direction,
             transmission: transmission,
             airConditioning: airConditioning
-        };
-
-        const newCar = {
-            model: model,
-            brand: brand,
-            yearManufacture: yearManufacture,
-            mileage: mileage,
-            details: details
         };
 
         await axios.post("http://localhost:8080/cars", newCar);
@@ -112,119 +108,138 @@ const RegisterCarCar = () => {
 
     return (
         <div className="divRegisterCar">
-            <form onSubmit={handleSubmit}>
-                <div className="registerCar">
-                    <h2>Informações</h2>
-                    <input
-                        type="text"
-                        className="inputRegisterCar"
-                        placeholder="Modelo:"
-                        value={model}
-                        onChange={(e) => setModel(e.target.value)}
-                    />
-                    <input
-                        type="text"
-                        className="inputRegisterCar"
-                        placeholder="Marca:"
+            <form className="registerCar" onSubmit={handleSubmit}>
+                <h2>Cadastrar Carro</h2>
+                <br />
+                <br />
+                <div>
+                    <select>
+                        <option value="">Marca</option>
+                        <option value="1">Ferrari</option>
+                        <option value="2">Lamborghini</option>
+                        <option value="3">Bugatti</option>
+                        <option value="4">Porsche</option>
+                        <option value="5">Rolls-Royce</option>
+                        <option value="6">Bentley</option>
                         value={brand}
                         onChange={(e) => setBrand(e.target.value)}
-                    />
+                    </select>
+                    <select>
+                        <option value="">Modelo</option>
+                        <option value="1">LaFerrari</option>
+                        <option value="2">Chiron</option>
+                        <option value="3">911 Turbo S</option>
+                        <option value="4">6.3 V12 Turbo</option>
+                        <option value="5">Phantom</option>
+                        <option value="6">Continental GT</option>
+                        value={model}
+                        onChange={(e) => setModel(e.target.value)}
+                    </select>
+                    <select>
+                        <option value="">Freio ABS</option>
+                        <option value="1">Sim</option>
+                        <option value="2">Não</option>
+                        value={absBrake}
+                        onChange={(e) => setAbsBrake(e.target.value)}
+                    </select>
+                    <select>
+                        <option value="">Vidros Elétricos</option>
+                        <option value="1">Sim</option>
+                        <option value="2">Não</option>
+                        value={electricGlass}
+                        onChange={(e) => setElectricGlass(e.target.value)}
+                    </select>
+                    <select>
+                        <option value="">Cor</option>
+                        <option value="1">Preto</option>
+                        <option value="2">Cinza</option>
+                        <option value="3">Branco</option>
+                        <option value="4">Azul</option>
+                        <option value="5">Vermelho</option>
+                        <option value="6">Marrom</option>
+                        value={color}
+                        onChange={(e) => setColor(e.target.value)}
+                    </select>
+                </div>
+                <div>
+                    <select>
+                            <option value="">Teto Solar</option>
+                            <option value="1">Sim</option>
+                            <option value="2">Não</option>
+                            value={sunroof}
+                            onChange={(e) => setSunroof(e.target.value)}
+                    </select>
+                    <select>
+                        <option value="">Portas</option>
+                        <option value="1">2</option>
+                        <option value="2">4</option>
+                        value={doors}
+                        onChange={(e) => setDoors(e.target.value)}
+                    </select>
+                    <select>
+                        <option value="">Travas Elétricas</option>
+                        <option value="1">Sim</option>
+                        <option value="2">Não</option>
+                        value={eletricLock}
+                        onChange={(e) => setEletricLock(e.target.value)}
+                    </select>
+                    <select>
+                    <option value="">Alarme</option>
+                        <option value="1">Sim</option>
+                        <option value="2">Não</option>
+                        value={alarm}
+                        onChange={(e) => setAlarm(e.target.value)}
+                    </select>
+                    <select>
+                        <option value="">Airbag</option>
+                        <option value="1">Sim</option>
+                        <option value="2">Não</option>
+                        value={airBag}
+                        onChange={(e) => setAirBag(e.target.value)}
+                    </select>
+                </div>
+                <div>
+                    <select>
+                    <option value="">Direção</option>
+                        <option value="1">Hidráulica</option>
+                        <option value="2">Elétrica</option>
+                        value={direction}
+                        onChange={(e) => setDirection(e.target.value)}
+                    </select>
+                    <select>
+                        <option value="">Transmissão</option>
+                        <option value="1">Automática</option>
+                        <option value="2">Manual</option>
+                        value={transmission}
+                        onChange={(e) => setTransmission(e.target.value)}
+                    </select>
+                    <select>
+                        <option value="">Ar Condicionado</option>
+                        <option value="1">Sim</option>
+                        <option value="2">Não</option>
+                        value={airConditioning}
+                        onChange={(e) => setAirConditioning(e.target.value)}
+                    </select>
                     <input
-                        type="text"
-                        className="inputRegisterCar"
-                        placeholder="Ano de Fabricação:"
-                        value={yearManufacture}
-                        onChange={(e) => setYearManufacture(e.target.value)}
-                    />
-                    <input
-                        type="text"
+                        type="number"
                         className="inputRegisterCar"
                         placeholder="Quilometragem:"
                         value={mileage}
                         onChange={(e) => setMileage(e.target.value)}
                     />
-                </div>
-                <div className="detailsCar">
-                    <h2>Detalhes</h2>
                     <input
-                        type="text"
-                        className="inputDetailsCar"
-                        placeholder="Freio ABS: SIM / NÃO"
-                        value={absBrake}
-                        onChange={(e) => setAbsBrake(e.target.value)}
-                    />
-                    <input
-                        type="text"
-                        className="inputDetailsCar"
-                        placeholder="Vidro Elétrico: SIM / NÃO"
-                        value={electricGlass}
-                        onChange={(e) => setElectricGlass(e.target.value)}
-                    />
-                    <input
-                        type="text"
-                        className="inputDetailsCar"
-                        placeholder="Cor: Ex: VERMELHO"
-                        value={color}
-                        onChange={(e) => setColor(e.target.value)}
-                    />
-                    <input
-                        type="text"
-                        className="inputDetailsCar"
-                        placeholder="Teto Solar: SIM / NÃO"
-                        value={sunroof}
-                        onChange={(e) => setSunroof(e.target.value)}
-                    />
-                    <input
-                        type="text"
-                        className="inputDetailsCar"
-                        placeholder="Portas: 2 ou 4"
-                        value={doors}
-                        onChange={(e) => setDoors(e.target.value)}
-                    />
-                    <input
-                        type="text"
-                        className="inputDetailsCar"
-                        placeholder="Trava Elétrica: SIM / NÃO"
-                        value={eletricLock}
-                        onChange={(e) => setEletricLock(e.target.value)}
-                    />
-                    <input
-                        type="text"
-                        className="inputDetailsCar"
-                        placeholder="Alarme: SIM / NÃO"
-                        value={alarm}
-                        onChange={(e) => setAlarm(e.target.value)}
-                    />
-                    <input
-                        type="text"
-                        className="inputDetailsCar"
-                        placeholder="AirBag: SIM / NÃO"
-                        value={airBag}
-                        onChange={(e) => setAirBag(e.target.value)}
-                    />
-                    <input
-                        type="text"
-                        className="inputDetailsCar"
-                        placeholder="Direção: HIDRÁULICA / ELÉTRICA"
-                        value={direction}
-                        onChange={(e) => setDirection(e.target.value)}
-                    />
-                    <input
-                        type="text"
-                        className="inputDetailsCar"
-                        placeholder="Transmissão: AUTOMÁTICA / MANUAL"
-                        value={transmission}
-                        onChange={(e) => setTransmission(e.target.value)}
-                    />
-                    <input
-                        type="text"
-                        className="inputDetailsCar"
-                        placeholder="Ar Condicionado: SIM / NÃO"
-                        value={airConditioning}
-                        onChange={(e) => setAirConditioning(e.target.value)}
+                        type="date"
+                        className="inputRegisterCar"
+                        placeholder="Ano de Fabricação:"
+                        value={yearManufacture}
+                        onChange={(e) => setYearManufacture(e.target.value)}
                     />
                 </div>
-                <button type="submit" className="btnRegisterCar">Cadastrar</button>
+                <div className="image-button">
+                    <input type="file" name="" id="" />
+                    <br />
+                    <button type="submit" className="btnRegisterCar">Cadastrar</button>
+                </div>
             </form>
         </div>
     );

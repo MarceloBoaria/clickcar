@@ -5,14 +5,12 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-   background-color: rgb(170, 162, 162); 
-   background: rgba(0, 0, 0, 0);
-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0);
-backdrop-filter: blur( 0px );
--webkit-backdrop-filter: blur( 0px );
-border: none
-   
-  
+  background-color: rgb(170, 162, 162); 
+  background: rgba(0, 0, 0, 0);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0);
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px );
+  border: none
 }
 
 h1 {
@@ -26,7 +24,7 @@ h1 {
   
 }
 
-.h1{
+.h1 {
   text-decoration: none;
   font-size: 15px;
   color: #ffc107;
@@ -42,13 +40,12 @@ h1 {
   color: white;
   font-family: "Roboto Slab", serif;
   font-weight: 400;
-  
 }
 
 .pNav {
   cursor: pointer;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: #ffc107;
   font-weight: 500;
   font-size: 20px;
 }
@@ -61,7 +58,17 @@ h1 {
   gap: 10px;
   margin-right: 40px;
   margin-top: 20px;
-} 
+}
+
+.isAdmin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  margin-right: 40px;
+  margin-top: 20px;
+}
 
 .btnHeader {
   padding: 10px;
