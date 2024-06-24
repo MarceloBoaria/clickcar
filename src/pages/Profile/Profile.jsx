@@ -118,8 +118,8 @@ const Profile = () => {
                     onChange={(e) => setComplement(e.target.value)}
                 />
                 <div className="buttons">
-                    <button className="btnEditAddress">Salvar Endereço</button>
                     <button className="btnEditProfile">Editar Informações</button>
+                    <button className="btnEditAddress">Salvar Endereço</button>
                 </div>
             </div>
         </div>
