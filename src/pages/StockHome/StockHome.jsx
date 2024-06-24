@@ -100,8 +100,7 @@ const Stock = () => {
 
               <h3>ATENDIMENTO</h3>
               <p>
-                Conte com os melhores especialistas do ramo automotivo para te
-                auxiliar na compra do seu novo veículo.
+              Confie nos melhores profissionais do ramo automotivo para ajudar na aquisição do seu novo carro.
               </p>
             </div>
             <div className="arrow">
@@ -112,8 +111,7 @@ const Stock = () => {
 
               <h3>SEGURANÇA</h3>
               <p>
-                Todos os veículos são periciados com laudo cautelar e
-                inspecionados pelos melhores mecânicos.
+              Todos os veículos são submetidos a perícia com laudo cautelar e inspecionados pelos mais qualificados mecânicos.
               </p>
             </div>
             <div className="arrow"></div>
@@ -122,8 +120,7 @@ const Stock = () => {
 
               <h3>QUALIDADE</h3>
               <p>
-                Nosso estoque possui veículos de alto padrão, com procedência e
-                em perfeitas condições de conservação.
+              Nosso estoque conta com veículos de alto padrão, com procedência comprovada e em excelente estado de conservação.
               </p>
             </div>
             <div className="arrow">
@@ -135,8 +132,8 @@ const Stock = () => {
 
               <h3>COMPROMISSO</h3>
               <p>
-                A Prime Imports realizará o seu melhor negócio na compra e venda
-                de veículos e com a melhor negociação!
+                A ClickCar realizará o seu melhor negócio na compra e venda
+                do seu veiculo
               </p>
             </div>
           </div>
