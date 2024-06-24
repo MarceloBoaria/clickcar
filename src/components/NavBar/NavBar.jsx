@@ -9,7 +9,7 @@ const NavBar = () => {
     const navigate = useNavigate();
 
     function routerOpen() {
-        localStorage.setItem("token", "");
+        localStorage.clear();
         alert("Usuário desconectado!")
         navigate("/");
     }
@@ -24,7 +24,7 @@ const NavBar = () => {
                     <Link className="pNav" to="/sobre" >SOBRE</Link>
                 </div>
                 {TOKEN ? (
-                    IS_ADMIN == true ? (
+                    IS_ADMIN == "true" ? (
                         <div className="isAdmin">
                             <Link to="/registerCar"><button className="btnHeader">CADASTRAR CARRO</button></Link>
                             <button onClick={routerOpen} className="btnHeader">SAIR</button>

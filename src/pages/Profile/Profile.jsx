@@ -30,7 +30,7 @@ const Profile = () => {
 
     return (
         <div className="divProfile">
-            <div className="informations">
+            <div className="profile">
                 <h2>Informações</h2>
                 <input
                     type="text"
@@ -67,9 +67,6 @@ const Profile = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <button className="btnEditProfile">Editar Informações</button>
-            </div>
-            <div className="address">
                 <h2>Endereço</h2>
                 <input
                     type="text"
@@ -120,7 +117,10 @@ const Profile = () => {
                     value={complement}
                     onChange={(e) => setComplement(e.target.value)}
                 />
-                <button className="btnEditAddress">Salvar Endereço</button>
+                <div className="buttons">
+                    <button className="btnEditAddress">Salvar Endereço</button>
+                    <button className="btnEditProfile">Editar Informações</button>
+                </div>
             </div>
         </div>
     );

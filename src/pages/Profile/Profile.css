@@ -1,37 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 
 .divProfile {
-    width: 100vw;
-    height: 100vh;
-    background-image: url("/images/tela-fundo-cadastro.jpg");
-    background-size: cover;
-    display: flex;
+    margin: 30px;
+    width: 96vw;
+    height: 82vh;
 }
 
-.informations {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    position: absolute;
-    left: 20px;
-    top: 140px;
-    padding: 10px 40px 10px 40px;
+.profile {
+    padding: 20px;
     border-radius: 10px;
-    color: white;
-    align-items: center;
-}
-
-.address {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    position: absolute;
-    left: 320px;
-    top: 93px;
-    padding: 10px 40px 10px 40px;
+    color: rgb(0, 0, 0);
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
     border-radius: 10px;
-    color: white;
-    align-items: center;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 h2 {
@@ -49,31 +33,40 @@ label {
 .inputProfile {
     padding: 10px;
     width: 250px;
-    background: transparent;
-    color: white;
-    border: 1px solid white;
+    background: none;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(1, 1, 1)!important;
     border-radius: 5px;
+    margin: 5px;
 }
 
 .inputProfile::placeholder {
     font-weight: bold;
     opacity: 0.5;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .inputAddress {
     padding: 10px;
     width: 250px;
-    background: transparent;
-    color: white;
-    border: 1px solid white;
+    background: none;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(1, 1, 1)!important;
     border-radius: 5px;
+    margin: 5px;
 }
 
 .inputAddress::placeholder {
     font-weight: bold;
     opacity: 0.5;
-    color: white;
+    color: rgb(0, 0, 0);
+}
+
+.buttons {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .btnEditProfile {

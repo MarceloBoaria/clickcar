@@ -47,6 +47,7 @@ const Register = () => {
             password !== ""
         ) {
             registerUser();
+            alert("Usuário cadastrado com sucesso!")
             navigate("/login");
 
         } else {
