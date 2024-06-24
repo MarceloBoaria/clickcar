@@ -26,7 +26,7 @@ const NavBar = () => {
                 {TOKEN ? (
                     IS_ADMIN == "true" ? (
                         <div className="isAdmin">
-                            <Link to="/registerCar"><button className="btnHeader">CADASTRAR CARRO</button></Link>
+                            <Link to="/registerCar"><button className="btnHeaderAdmin">CADASTRAR CARRO</button></Link>
                             <button onClick={routerOpen} className="btnHeader">SAIR</button>
                         </div>
                     ) : (

@@ -83,3 +83,16 @@ h1 {
   font-weight: 700;
 }
 
+.btnHeaderAdmin {
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  width: 170px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #ffc107;
+  color: black;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+}
+
