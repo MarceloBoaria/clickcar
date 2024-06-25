@@ -11,16 +11,18 @@ const RegisterCarCar = () => {
     const [yearManufacture, setYearManufacture] = useState('');
     const [mileage, setMileage] = useState('');
     const [absBrake, setAbsBrake] = useState('');
-    const [electricGlass, setElectricGlass] = useState('');
+    const [eletricGlass, setElectricGlass] = useState('');
     const [color, setColor] = useState('');
     const [sunroof, setSunroof] = useState('');
     const [doors, setDoors] = useState('');
     const [eletricLock, setEletricLock] = useState('');
     const [alarm, setAlarm] = useState('');
-    const [airBag, setAirBag] = useState('');
+    const [airbag, setAirBag] = useState('');
     const [direction, setDirection] = useState('');
     const [transmission, setTransmission] = useState('');
     const [airConditioning, setAirConditioning] = useState('');
+    const [category, setCategory] = useState('');
+    const [price, setPrice] = useState('');
 
     const navigate = useNavigate();
 
@@ -39,22 +41,25 @@ const RegisterCarCar = () => {
             model: model,
             brand: brand,
             yearManufacture: yearManufacture,
-            mileage: mileage,absBrake: absBrake,
-            electricGlass: electricGlass,
+            mileage: mileage,
+            absBrake: absBrake,
+            eletricGlass: eletricGlass,
             color: color,
             sunroof: sunroof,
             doors: doors,
             eletricLock: eletricLock,
             alarm: alarm,
-            airBag: airBag,
+            airbag: airbag,
             direction: direction,
             transmission: transmission,
-            airConditioning: airConditioning
+            airConditioning: airConditioning,
+            category: category,
+            price: price
         };
 
-        await axios.post("http://localhost:8080/cars", newCar);
+        const token = localStorage.getItem("token")
+        await axios.post("http://localhost:8080/cars", newCar, { headers: {"Authorization": `Bearer ${token}`}});
         console.log(newCar);
-    
         
         let carsList = cars
         carsList.push(newCar);
@@ -77,6 +82,8 @@ const RegisterCarCar = () => {
         setDirection("");
         setTransmission("");
         setAirConditioning("");
+        setCategory("");
+        setPrice("");
     };
 
     const handleSubmit = (e) => {
@@ -87,16 +94,18 @@ const RegisterCarCar = () => {
             yearManufacture !== "" &&
             mileage !== "" &&
             absBrake !== "" &&
-            electricGlass !== "" &&
+            eletricGlass !== "" &&
             color !== "" &&
             sunroof !== "" &&
             doors !== "" &&
             eletricLock !== "" &&
             alarm !== "" &&
-            airBag !== "" &&
+            airbag !== "" &&
             direction !== "" &&
             transmission !== "" &&
-            airConditioning !== ""
+            airConditioning !== "" &&
+            category !== "" &&
+            price !== ""
         ) {
             registerCar();
         } else {
@@ -113,113 +122,101 @@ const RegisterCarCar = () => {
                 <br />
                 <br />
                 <div>
-                    <select>
+                    <select value={brand} onChange={(e) => setBrand(e.target.value)}>
                         <option value="">Marca</option>
-                        <option value="1">Ferrari</option>
-                        <option value="2">Lamborghini</option>
-                        <option value="3">Bugatti</option>
-                        <option value="4">Porsche</option>
-                        <option value="5">Rolls-Royce</option>
-                        <option value="6">Bentley</option>
-                        value={brand}
-                        onChange={(e) => setBrand(e.target.value)}
+                        <option value="Ferrari">Ferrari</option>
+                        <option value="Lamborghini">Lamborghini</option>
+                        <option value="Bugatti">Bugatti</option>
+                        <option value="Porsche">Porsche</option>
+                        <option value="Rolls-Royce">Rolls-Royce</option>
+                        <option value="Bentley">Bentley</option>
                     </select>
-                    <select>
+                    <select value={model} onChange={(e) => setModel(e.target.value)}>
                         <option value="">Modelo</option>
-                        <option value="1">LaFerrari</option>
-                        <option value="2">Chiron</option>
-                        <option value="3">911 Turbo S</option>
-                        <option value="4">6.3 V12 Turbo</option>
-                        <option value="5">Phantom</option>
-                        <option value="6">Continental GT</option>
-                        value={model}
-                        onChange={(e) => setModel(e.target.value)}
+                        <option value="LaFerrari">LaFerrari</option>
+                        <option value="Chiron">Chiron</option>
+                        <option value="911 Turbo S">911 Turbo S</option>
+                        <option value="6.3 V12 Turbo">6.3 V12 Turbo</option>
+                        <option value="Phantom">Phantom</option>
+                        <option value="Continental GT">Continental GT</option>
                     </select>
-                    <select>
+                    <select value={absBrake} onChange={(e) => setAbsBrake(e.target.value)}>
                         <option value="">Freio ABS</option>
-                        <option value="1">Sim</option>
-                        <option value="2">Não</option>
-                        value={absBrake}
-                        onChange={(e) => setAbsBrake(e.target.value)}
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
                     </select>
-                    <select>
+                    <select value={eletricGlass} onChange={(e) => setElectricGlass(e.target.value)}>
                         <option value="">Vidros Elétricos</option>
-                        <option value="1">Sim</option>
-                        <option value="2">Não</option>
-                        value={electricGlass}
-                        onChange={(e) => setElectricGlass(e.target.value)}
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
                     </select>
-                    <select>
+                    <select value={color} onChange={(e) => setColor(e.target.value)}>
                         <option value="">Cor</option>
-                        <option value="1">Preto</option>
-                        <option value="2">Cinza</option>
-                        <option value="3">Branco</option>
-                        <option value="4">Azul</option>
-                        <option value="5">Vermelho</option>
-                        <option value="6">Marrom</option>
-                        value={color}
-                        onChange={(e) => setColor(e.target.value)}
+                        <option value="PRETO">Preto</option>
+                        <option value="CINZA">Cinza</option>
+                        <option value="BRANCO">Branco</option>
+                        <option value="AZUL">Azul</option>
+                        <option value="VERMELHO">Vermelho</option>
+                        <option value="MARROM">Marrom</option>
                     </select>
                 </div>
                 <div>
-                    <select>
+                    <select value={sunroof} onChange={(e) => setSunroof(e.target.value)}>
                             <option value="">Teto Solar</option>
-                            <option value="1">Sim</option>
-                            <option value="2">Não</option>
-                            value={sunroof}
-                            onChange={(e) => setSunroof(e.target.value)}
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
                     </select>
-                    <select>
+                    <select value={doors} onChange={(e) => setDoors(e.target.value)}>
                         <option value="">Portas</option>
-                        <option value="1">2</option>
-                        <option value="2">4</option>
-                        value={doors}
-                        onChange={(e) => setDoors(e.target.value)}
+                        <option value="2">2</option>
+                        <option value="4">4</option>
                     </select>
-                    <select>
+                    <select value={eletricLock} onChange={(e) => setEletricLock(e.target.value)}>
                         <option value="">Travas Elétricas</option>
-                        <option value="1">Sim</option>
-                        <option value="2">Não</option>
-                        value={eletricLock}
-                        onChange={(e) => setEletricLock(e.target.value)}
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
                     </select>
-                    <select>
-                    <option value="">Alarme</option>
-                        <option value="1">Sim</option>
-                        <option value="2">Não</option>
-                        value={alarm}
-                        onChange={(e) => setAlarm(e.target.value)}
+                    <select value={alarm} onChange={(e) => setAlarm(e.target.value)}>
+                        <option value="">Alarme</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
                     </select>
-                    <select>
+                    <select value={airbag} onChange={(e) => setAirBag(e.target.value)}>
                         <option value="">Airbag</option>
-                        <option value="1">Sim</option>
-                        <option value="2">Não</option>
-                        value={airBag}
-                        onChange={(e) => setAirBag(e.target.value)}
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
                     </select>
                 </div>
                 <div>
-                    <select>
-                    <option value="">Direção</option>
-                        <option value="1">Hidráulica</option>
-                        <option value="2">Elétrica</option>
-                        value={direction}
-                        onChange={(e) => setDirection(e.target.value)}
+                    <select value={direction} onChange={(e) => setDirection(e.target.value)}>
+                        <option value="">Direção</option>
+                        <option value="HIDRAULIC">Hidráulica</option>
+                        <option value="ELETRIC">Elétrica</option>
                     </select>
-                    <select>
+                    <select value={transmission} onChange={(e) => setTransmission(e.target.value)}>
                         <option value="">Transmissão</option>
-                        <option value="1">Automática</option>
-                        <option value="2">Manual</option>
-                        value={transmission}
-                        onChange={(e) => setTransmission(e.target.value)}
+                        <option value="AUTOMATIC">Automática</option>
+                        <option value="MANUAL">Manual</option>
                     </select>
-                    <select>
+                    <select value={airConditioning} onChange={(e) => setAirConditioning(e.target.value)}>
                         <option value="">Ar Condicionado</option>
-                        <option value="1">Sim</option>
-                        <option value="2">Não</option>
-                        value={airConditioning}
-                        onChange={(e) => setAirConditioning(e.target.value)}
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
                     </select>
+                    <select value={category} onChange={(e) => setCategory(e.target.value)}>
+                        <option value="">Categoria</option>
+                        <option value="NEW">Novo</option>
+                        <option value="SEMINEW">Seminovo</option>
+                    </select>
+                    <input
+                        type="number"
+                        className="inputRegisterCar"
+                        placeholder="Preço:"
+                        value={price}
+                        onChange={(e) => setPrice(e.target.value)}
+                    />
+                </div>
+                <div>
                     <input
                         type="number"
                         className="inputRegisterCar"
@@ -228,7 +225,7 @@ const RegisterCarCar = () => {
                         onChange={(e) => setMileage(e.target.value)}
                     />
                     <input
-                        type="date"
+                        type="number"
                         className="inputRegisterCar"
                         placeholder="Ano de Fabricação:"
                         value={yearManufacture}
