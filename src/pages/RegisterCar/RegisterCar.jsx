@@ -33,9 +33,9 @@ const RegisterCarCar = () => {
             navigate("/")
         }
   
-      }, []);
+        }, []);
 
-    const registerCar = async () => {
+        const registerCar = async () => {
 
         const newCar = {
             model: model,
@@ -108,6 +108,8 @@ const RegisterCarCar = () => {
             price !== ""
         ) {
             registerCar();
+            alert("Carro cadastrado com sucesso!")
+            navigate("/")
         } else {
             alert(
                 "Por favor, preencha todos os campos para cadastrar um novo carro!"

@@ -4,89 +4,69 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Profile = () => {
+
     const [userData, setUserData] = useState({
         name: '',
         email: '',
         cpf: '',
         phone: '',
-        password: '',
-        cep: '',
-        city: '',
-        state: '',
-        neighborhood: '',
-        street: '',
-        number: '',
-        complement: ''
+        password: ''
     });
-
-    const Profile = async () => {
-        const newUser = {
-            name: name,
-            email: email,
-            cpf: cpf,
-            phone: phone,
-            password: password,
-            cep: cep,
-            cidade: cidade,
-            estado: estado,
-            bairro: baixo,
-            rua: rua,
-            numero: numero,
-            complemento: complemento,
-
-        };
-
-        await axios.put("http://localhost:8080/users", newUser);
-        console.log(newUser);
-
-        let usersList = users;
-        usersList.push(newUser);
-
-        setUsers(usersList);
-        setName("");
-        setEmail("");
-        setCpf("");
-        setPhone("");
-        setPassword("");
-        setcep("");
-        setcidade("");
-        setestado("");
-        setbairro("");
-        setrua("");
-        setnumero("");
-        setcomplemento("");
-
-    };
     
     const [showModal, setShowModal] = useState(false);
     const navigate = useNavigate();
+    const userId = localStorage.getItem("userId");
 
     useEffect(() => {
-        // Verifica se o usuário está logado
+
         if (!localStorage.getItem("token")) {
             alert("Você não está logado!")
             navigate("/login")
         } else {
-            // Carrega os dados do usuário (simulação)
-            const storedUserData = JSON.parse(localStorage.getItem("userData"));
-            if (storedUserData) {
-                setUserData(storedUserData);
-            }
+            const token = localStorage.getItem("token")
+            axios.get(`http://localhost:8080/users/${userId}`, {
+                headers: { "Authorization": `Bearer ${token}` }
+            })
+            .then(response => {
+                setUserData(response.data);
+            })
+            .catch(error => {
+                console.error("Erro ao carregar os dados do usuário:", error);
+            });
         }
-    }, []);
+    }, [navigate, userId]);
 
-    const handleUpdateUserData = () => {
-        // Atualiza os dados do usuário (simulação)
-        localStorage.setItem("userData", JSON.stringify(userData));
-        alert("Dados atualizados com sucesso!");
+    const handleUpdateUserData = async () => {
+
+        const token = localStorage.getItem("token")
+        await axios.put(`http://localhost:8080/users/${userId}`, userData, {
+            headers: {"Authorization": `Bearer ${token}`}
+            })
+            .then(response => {
+                alert("Dados atualizados com sucesso!");
+            })
+            .catch(error => {
+                console.error("Erro ao atualizar os dados do usuário:", error);
+                alert("Erro ao atualizar os dados!");
+            });
     };
 
     const handleDeleteUser = () => {
-        // Deleta o usuário (simulação)
-        localStorage.removeItem("token");
-        localStorage.removeItem("userData");
-        alert("Usuário deletado com sucesso!");
-        navigate("/");
+
+        const token = localStorage.getItem("token")
+        axios.delete(`http://localhost:8080/users/${userId}`, {
+            headers: {"Authorization": `Bearer ${token}`}
+            })
+            .then(response => {
+                localStorage.removeItem("token");
+                localStorage.removeItem("userId");
+                alert("Usuário deletado com sucesso!");
+                navigate("/");
+            })
+            .catch(error => {
+                console.error("Erro ao deletar o usuário:", error);
+                alert("Erro ao deletar o usuário!");
+            });
     };
 
     const handleChange = (e) => {
@@ -116,7 +96,6 @@ const Profile = () => {
                 <tbody>
                     <tr>
                         <td><h2>Informações Pessoais</h2></td>
-                        <td><h2>Endereço</h2></td>
                     </tr>
                     <tr>
                         <td>
@@ -158,64 +137,6 @@ const Profile = () => {
                                 placeholder="Senha:"
                                 name="password"
                                 value={userData.password}
-                                onChange={handleChange}
-                            />
-                        </td>
-                        <td>
-                            <input
-                                type="text"
-                                className="inputAddress"
-                                placeholder="CEP:"
-                                name="cep"
-                                value={userData.cep}
-                                onChange={handleChange}
-                            />
-                            <input
-                                type="text"
-                                className="inputAddress"
-                                placeholder="Cidade:"
-                                name="city"
-                                value={userData.city}
-                                onChange={handleChange}
-                            />
-                            <input
-                                type="text"
-                                className="inputAddress"
-                                placeholder="Estado:"
-                                name="state"
-                                value={userData.state}
-                                onChange={handleChange}
-                            />
-                            <input
-                                type="text"
-                                className="inputAddress"
-                                placeholder="Bairro:"
-                                name="neighborhood"
-                                value={userData.neighborhood}
-                                onChange={handleChange}
-                            />
-                            <input
-                                type="text"
-                                className="inputAddress"
-                                placeholder="Rua:"
-                                name="street"
-                                value={userData.street}
-                                onChange={handleChange}
-                            />
-                            <input
-                                type="number"
-                                className="inputAddress"
-                                placeholder="Número:"
-                                name="number"
-                                value={userData.number}
-                                onChange={handleChange}
-                            />
-                            <input
-                                type="text"
-                                className="inputAddress"
-                                placeholder="Complemento:"
-                                name="complement"
-                                value={userData.complement}
                                 onChange={handleChange}
                             />
                         </td>
