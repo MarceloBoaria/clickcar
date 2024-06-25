@@ -1,100 +1,127 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 
 .divProfile {
-    margin: 30px;
-    width: 96vw;
-    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    align-items: center;
+    margin-left: 300px;
+    margin-right: 300px;
 }
 
-.profile {
-    padding: 20px;
-    border-radius: 10px;
-    color: rgb(0, 0, 0);
-    background: rgba( 255, 255, 255, 0.2 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 10px );
-    -webkit-backdrop-filter: blur( 10px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+.profileTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.profileTable td {
+    vertical-align: top;
+    padding: 10px;
 }
 
 h2 {
-    font-family: "Roboto Slab", serif;
-    font-optical-sizing: auto;
+    font-family: 'Roboto Slab', serif;
     font-weight: 700;
-    font-style: normal;
     text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-label {
+.inputProfile, .inputAddress {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    
+
+}
+
+.btnEditAddress{
+    padding: 10px 50px;
+    margin: 0 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #ffc107;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     text-align: center;
-}
-
-.inputProfile {
-    padding: 10px;
-    width: 250px;
-    background: none;
-    color: rgb(0, 0, 0);
-    border: 1px solid rgb(1, 1, 1)!important;
-    border-radius: 5px;
-    margin: 5px;
-}
-
-.inputProfile::placeholder {
-    font-weight: bold;
-    opacity: 0.5;
-    color: rgb(0, 0, 0);
-}
-
-.inputAddress {
-    padding: 10px;
-    width: 250px;
-    background: none;
-    color: rgb(0, 0, 0);
-    border: 1px solid rgb(1, 1, 1)!important;
-    border-radius: 5px;
-    margin: 5px;
-}
-
-.inputAddress::placeholder {
-    font-weight: bold;
-    opacity: 0.5;
-    color: rgb(0, 0, 0);
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .buttons {
-    margin: 20px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 10px;
 }
 
-.btnEditProfile {
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 15px;
-    width: 150px;
-    background-color: white;
-    margin-top: 10px;
+.btnEditProfile, .btnDelete {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
     cursor: pointer;
-    font-family: "Roboto Slab", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btnEditProfile:hover, .btnDelete:hover {
+    background-color: #555;
+    transform: scale(1.02);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.btnEditAddress {
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 15px;
-    width: 150px;
-    background-color: white;
-    margin-top: 10px;
+.modal-buttons {
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
     cursor: pointer;
-    font-family: "Roboto Slab", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.modal-buttons button:hover {
+    background-color: #555;
+    transform: scale(1.02);
 }
