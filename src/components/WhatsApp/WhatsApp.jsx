@@ -1,7 +1,7 @@
 import React from 'react';
 import "./WhatsApp.css";
 const WhatsApp = () => {
-  const phoneNumber = '5548999316251'; // Substitua pelo número desejado
+  const phoneNumber = '5548999316278'; // Substitua pelo número desejado
 
   return (
     <a

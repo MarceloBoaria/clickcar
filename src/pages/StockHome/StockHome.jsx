@@ -30,7 +30,7 @@ const Stock = () => {
       preco: "R$2.950.000",
       ano: 2024,
       km: "3.500Km",
-      image: "images/Bugatti/Bugatti4.jpg",
+      image: "images/Bugatti/Bugatti1.jpg",
     },
     {
       id: 4,
@@ -39,7 +39,7 @@ const Stock = () => {
       preco: "R$2.950.000",
       ano: 2022,
       km: "3.500Km",
-      image: "images/Porsche/Porsche7.jpg",
+      image: "images/Porsche/Porsche3.jpg",
     },
     {
       id: 5,
@@ -52,13 +52,32 @@ const Stock = () => {
     },
     {
       id: 6,
-      marca: "Bentley",
-      modelo: "Continental GT",
-      preco: "R$2.950.000",
+      marca: "Volvo XC40",
+      modelo: "XC40 BEV 69 kWh Recharge Plus automático",
+      preco: "R$399.950",
       ano: 2024,
       km: "3.500Km",
-      image: "images/Bentley/Bentley1.jpg",
+      image: "images/Volvo/volvo.jpg",
     },
+    {
+      id: 6,
+      marca: "Bmw M2",
+      modelo: "M2 Coupé Track 3.0 automático",
+      preco: "R$617.950",
+      ano: 2024,
+      km: "17.000Km",
+      image: "images/Bmw/bmw.jpg",
+    },
+    {
+      id: 6,
+      marca: "Jaguar F-Type",
+      modelo: "2.0 p300 gasolina r-dynamic cabrio automático",
+      preco: "R$589.377",
+      ano: 2021,
+      km: "45.600Km",
+      image: "images/Jaguar/jaguar.jpg",
+    },
+    
   ];
 
   return (
@@ -68,7 +87,7 @@ const Stock = () => {
           <p className="titulostockHome">
             ALGUNS DOS VEÍCULOS EM NOSSO ESTOQUE
           </p>
-          <p className="pstockHome">
+          <p className="pstockHome1">
             Todos os nossos veículos são inspecionados e periciados, garantindo
             o máximo em qualidade e excelência.
           </p>

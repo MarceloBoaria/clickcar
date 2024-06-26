@@ -5,16 +5,16 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  box-shadow: 4 40px 2px 0 rgba(145, 148, 202, 0.37);
-  backdrop-filter: blur( 20px );
+  box-shadow: 0 8px 22px 0 rgba(85, 89, 148, 0.37);
+  backdrop-filter: blur( 10px );
   -webkit-backdrop-filter: blur( 10px );
-  border: 0px solid rgba( 255, 255, 255, 0.18 ); 
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
-h1 {
+.h1 {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 400;                                                                                     
   font-style: normal;
   margin-left: 20px;
   color: #ffc107;
@@ -22,7 +22,7 @@ h1 {
   
 }
 
-.h1 {
+.h11 {
   text-decoration: none;
   font-size:15px;
   color: #ffc107;
@@ -55,7 +55,16 @@ h1 {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  /* gap: 50px;  */
+  gap: 50px;
+  margin-right: 40px;
+}
+
+.login-cadastro1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
   margin-right: 30px;
 }
 
@@ -72,7 +81,7 @@ h1 {
 .btnHeader {
   padding: 10px;
   border: 1px solid rgb(0, 0, 0);
-  border-radius: 4px;
+  border-radius: 1px;
   width: 100px;
   font-weight: bold;
   cursor: pointer;
@@ -80,22 +89,35 @@ h1 {
   color: rgb(255, 255, 255);
   font-family: "Roboto Slab", serif;
   font-weight: 700;
-  margin-bottom: 10px;
 }
-
 
 .btnHeader1 {
   padding: 10px;
   border: 1px solid rgb(0, 0, 0);
-  border-radius: 4px;
-  border: solid 1px;
+  border-radius: 5px;
   width: 100px;
   font-weight: bold;
   cursor: pointer;
-  background-color: #ffc107;
-  color: black;
+  background-color: #d11017;
+  color: rgb(255, 255, 255);
   font-family: "Roboto Slab", serif;
   font-weight: 700;
+  border: solid 3px black;
+
+}
+
+.btnHeader2 {
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  width: 100px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #d11017;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  border: solid 3px black;
   margin-bottom: 10px;
 }
 

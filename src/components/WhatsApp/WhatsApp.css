@@ -16,7 +16,5 @@
     background-color: #ffc107;  /* Mudança de cor no hover */
     transform: scale(03);  /* Efeito de crescimento no hover */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Adicionei sombra no hover */
-    color: #000000;
-  
+    color: black;
 }
-
