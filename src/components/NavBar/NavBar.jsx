@@ -37,7 +37,7 @@ const NavBar = () => {
                     )
                 ) : (
                     <div className="login-cadastro">
-                        <Link to="/login"><button className="btnHeader">LOGIN</button></Link>
+                        <Link to="/login"><button className="btnHeader1">LOGIN</button></Link>
                         <Link to="/register"><button className="btnHeader">CADASTRO</button></Link>
                     </div>
                 )}
