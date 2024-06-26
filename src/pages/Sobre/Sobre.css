@@ -2,21 +2,16 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 60px;
-
 }
-
 
 .titulo {
   font-family:'Times New Roman', Times, serif;
   font-weight: 700;
   font-style: normal;
   margin-bottom: 40px;
-
-
 }
 
-
-.Texto{
+.Texto{ 
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 5px;

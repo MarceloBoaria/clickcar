@@ -35,8 +35,7 @@ const Sobre = () => {
           missão de proporcionar uma experiência de condução inigualável, desde
           suas raízes em Paris até seu sucesso no Brasil.
         </p>
-      </div>
-    
+      </div>    
     </div>
     <div>{<Footer />}</div>
     </>
