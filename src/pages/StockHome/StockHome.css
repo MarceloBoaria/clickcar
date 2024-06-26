@@ -1,6 +1,6 @@
 .flexLinhaHome {
     display: flex;
-    gap: 25px;
+    gap: 22px;
     flex-wrap: wrap;
     margin: 20px;
     justify-content: center;
@@ -29,21 +29,21 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     flex-direction: column;
     align-items: center;
     color: rgb(0, 0, 0);
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
     font-size: 20px;
 }
 
 .tituloStockHome {
-    font-family: "Roboto Slab", serif;
     font-size: 25px;
     font-weight: 400;
     font-style: normal;
     margin-top: 35px;
 }
 
-.pStockHome {
+.pStockHome1 {
     font-size: 20px;
     margin: 10px;
+
 }
 
 .btnStockHome {
@@ -78,6 +78,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     /* width: 100%; */
     text-align: center;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 /* PrimeImports.css */
@@ -106,7 +107,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
   
   .service {
-    background-color: #f2f0f0;
+    background-color: #fcf6f6;
     color: #000000;
     padding: 20px;
     margin: 10px;
@@ -120,7 +121,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
   .service:hover{
     background-color: #ffc107;
-    transition: calc(0.7s);
+    transition: calc(0.9s);
   }
   
   
@@ -136,6 +137,6 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   .arrow {
     font-size: 40px;
     margin: 10px;
-    color: #ccc;
+    color: #e5e2e2;
   }
   

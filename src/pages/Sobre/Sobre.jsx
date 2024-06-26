@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer';
 
 const Sobre = () => {
   return (
+    <>
     <div className="about-container">
       <h1 className="titulo">A mais de 40 anos no mercado </h1>
       <div className="Texto">
@@ -35,8 +36,10 @@ const Sobre = () => {
           suas raízes em Paris até seu sucesso no Brasil.
         </p>
       </div>
-        { <Footer /> }
+    
     </div>
+    <div>{<Footer />}</div>
+    </>
   );
 };
 

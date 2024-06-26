@@ -17,7 +17,7 @@ const NavBar = () => {
     return (
         <nav>
             <div className="navBar">
-                <Link to="/" className="h1"><h1>C L I C K C A R</h1></Link>
+                <Link to="/" className="h11"><h1>C L I C K C A R</h1></Link>
                 <div className="cabecalho">
                     <Link className="pNav" to="/" >HOME</Link>
                     <Link className="pNav" to="/stock" >ESTOQUE</Link>
@@ -32,13 +32,13 @@ const NavBar = () => {
                     ) : (
                         <div className="login-cadastro">
                             <Link to="/profile"><button className="btnHeader">PERFIL</button></Link>
-                            <button onClick={routerOpen} className="btnHeader">SAIR</button>
+                            <button onClick={routerOpen} className="btnHeader2">SAIR</button>
                         </div>
                     )
                 ) : (
-                    <div className="login-cadastro">
+                    <div className="login-cadastro1">
                         <Link to="/login"><button className="btnHeader">LOGIN</button></Link>
-                        <Link to="/register"><button className="btnHeader">CADASTRO</button></Link>
+                        <Link to="/register"><button className="btnHeader1">CADASTRO</button></Link>
                     </div>
                 )}
                 

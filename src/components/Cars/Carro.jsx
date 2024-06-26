@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import "./Carro.css";
+import { useEffect, useState } from 'react';
+import './Carro.css';
 import WhatsApp from '../WhatsApp/WhatsApp';
 
 function Carro(props) {
@@ -8,9 +8,7 @@ function Carro(props) {
   useEffect(() => {}, [marca]);
 
   return (
-
     <div className="divCarro">
-      {/* <class>{props.image}</class> */}
       <div className="sub_carro">
         <img className="foto" src={props.image} alt="Carro" />
       </div>
@@ -30,13 +28,13 @@ function Carro(props) {
       <div className="KmCarro">
         <p>{props.km}</p>
       </div>
-      
-      <div type="text" placeholder="SAIBA MAIS" className="carro"  >
-      <WhatsApp />
+
+      <div type="text" placeholder="SAIBA MAIS" className="carro">
+        <WhatsApp />
       </div>
       <hr className="Line"></hr>
-      <span className="material-symbols-outlined">
-      favorite
+      <span className="material-icons">
+        favorite
       </span>
     </div>
   );
