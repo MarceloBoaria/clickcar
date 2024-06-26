@@ -21,6 +21,7 @@ const Register = () => {
             cpf: cpf,
             phone: phone,
             password: password,
+            isAdmin: false
         };
 
         await axios.post("http://localhost:8080/users", newUser);

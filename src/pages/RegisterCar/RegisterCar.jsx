@@ -235,9 +235,9 @@ const RegisterCarCar = () => {
                     />
                 </div>
                 <div className="image-button">
-                    <input type="file" name="" id="" />
-                    <br />
+                    <button className="btnRegisterCar">Editar Carro</button>
                     <button type="submit" className="btnRegisterCar">Cadastrar</button>
+                    <button className="btnRegisterCar">Deletar Carro</button>
                 </div>
             </form>
         </div>

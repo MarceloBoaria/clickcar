@@ -39,7 +39,7 @@ const Login = () => {
       }
       } catch {
         alert(
-          "Por favor, preencha todos os campos para logar um novo usuário!"
+          "Usuário ou senha incorretos, por favor conferir e tentar novamente!"
       );
       }
       

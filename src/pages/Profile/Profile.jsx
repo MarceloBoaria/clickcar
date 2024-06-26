@@ -10,7 +10,8 @@ const Profile = () => {
         email: '',
         cpf: '',
         phone: '',
-        password: ''
+        password: '',
+        isAdmin: false
     });
     
     const [showModal, setShowModal] = useState(false);
@@ -34,16 +35,19 @@ const Profile = () => {
                 console.error("Erro ao carregar os dados do usuário:", error);
             });
         }
-    }, [navigate, userId]);
+    }, []);
 
     const handleUpdateUserData = async () => {
 
         const token = localStorage.getItem("token")
+        console.log(userData)
+        console.log(userId)
         await axios.put(`http://localhost:8080/users/${userId}`, userData, {
             headers: {"Authorization": `Bearer ${token}`}
             })
             .then(response => {
                 alert("Dados atualizados com sucesso!");
+                navigate("/")
             })
             .catch(error => {
                 console.error("Erro ao atualizar os dados do usuário:", error);
@@ -144,7 +148,6 @@ const Profile = () => {
                 </tbody>
             </table>
             <div className="buttons">
-                <button className="btnEditProfile" onClick={handleUpdateUserData}>Editar Informações</button>
                 <button className="btnEditAddress" onClick={handleUpdateUserData}>Salvar </button>
                 <button className="btnDelete" onClick={handleConfirmDelete}>Excluir Conta</button>
             </div>
