@@ -5,12 +5,10 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  background-color: rgb(170, 162, 162); 
-  background: rgba(0, 0, 0, 0);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0);
-  backdrop-filter: blur( 0px );
-  -webkit-backdrop-filter: blur( 0px );
-  border: none
+  box-shadow: 4 40px 2px 0 rgba(145, 148, 202, 0.37);
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 10px );
+  border: 0px solid rgba( 255, 255, 255, 0.18 ); 
 }
 
 h1 {
@@ -26,8 +24,10 @@ h1 {
 
 .h1 {
   text-decoration: none;
-  font-size: 15px;
+  font-size:15px;
   color: #ffc107;
+  margin-bottom: 2px;
+  
 }
 
 .cabecalho {
@@ -55,9 +55,8 @@ h1 {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  gap: 10px;
-  margin-right: 40px;
-  margin-top: 20px;
+  /* gap: 50px;  */
+  margin-right: 30px;
 }
 
 .isAdmin {
@@ -73,7 +72,23 @@ h1 {
 .btnHeader {
   padding: 10px;
   border: 1px solid rgb(0, 0, 0);
-  border-radius: 5px;
+  border-radius: 4px;
+  width: 100px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #97142a;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+
+.btnHeader1 {
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  border: solid 1px;
   width: 100px;
   font-weight: bold;
   cursor: pointer;
@@ -81,6 +96,7 @@ h1 {
   color: black;
   font-family: "Roboto Slab", serif;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .btnHeaderAdmin {
@@ -92,7 +108,7 @@ h1 {
   cursor: pointer;
   background-color: #ffc107;
   color: black;
-  font-family: "Roboto Slab", serif;
+  font-family: "Rob'oto Slab", serif;
   font-weight: 700;
 }
 
